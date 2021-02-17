@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Raleway-VariableFont_wght';
+    src: url('fonts/Raleway-VariableFont_wght.ttf');
+}
+@font-face { 
+    font-family: 'Raleway-ExtraBold';
+    src: url('fonts/Raleway-ExtraBold.ttf');   
+}
+body { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway-VariableFont_wght', sans-serif;
+}
+header { 
+    margin-right: 5%;
+    margin-left: 5%;
+}
+/*-----header-----*/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 23px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;      
+}
+nav ul li a:hover {
+    color: #0065FC;
+    border-top: #0065FC 3px solid;    
+}
+nav a span {
+    font-weight: 800;
+    color: #0065FC;
+}
