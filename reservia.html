@@ -21,24 +21,28 @@
     </header>
     <main>
         <!--section 1-->
-        <section>
+        <section id="research">
             <article>
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-            <article>
-            <form method="POST" action="button">
+            </article>
+            <form method="POST">
                 <label><i class="fas fa-map-marker-alt fa-lg"></i></label><input class="champ" type="text" name="champ_de_saisie" value="Marseille, France"/>
-                <button class="btn1" disabled><span class="btn1txt">Rechercher</span><i class="fas fa-search"></i></span></button>
+                <button class="btn1" disabled><span class="btn1txt">Rechercher</span><span><i class="fas fa-search"></i></span></button>
             </form>
-            <div id="btn2container">
-                <p><span>Filtres</span>
-                    <span class="icon"><i class="fas fa-money-bill-wave fa-sm"></i></span><button class="btn2">Économique</button>
-                    <span class="icon"><i class="fas fa-child fa-lg"></i></span><button class="btn2">Familial</button>
-                    <span class="icon"><i class="fas fa-heart fa-lg"></i></span><button class="btn2">Romantique</button>
-                    <span class="icon"><i class="fas fa-dog fa-lg"></i></span><button class="btn2">Animaux autorisés</button>
-                </p>
-            </div>  
-            <p><span class="pointinfo"><i class="fas fa-info fa-sm"></i></span><span>Plus de 500 logements sont disponibles dans cette ville</span></p>
+            <div id="filters">
+                <p>Filtres</p>
+                <div id="btn2container">
+                    <button class="btn2"><span class="iconflag"><i class="fas fa-money-bill-wave fa-sm"></i></span>Économique</button>
+                    <button class="btn2"><span class="iconchild"><i class="fas fa-child"></i></span>Familial</button>
+                    <button class="btn2"><i class="fas fa-heart"></i>Romantique</button>
+                    <button class="btn2"><i class="fas fa-dog"></i>Animaux autorisés</button>
+                </div>   
+            </div>
+            <div id="info">  
+                <p><i class="fas fa-info fa-sm"></i></p>
+                <p><span>Plus de 500 logements sont disponibles dans cette ville</span></p>
+            </div>
         </section>
         <!--section 2-->  
         <section id="hebergements">
@@ -76,7 +80,7 @@
                         <span class="greystar"><i class="fas fa-star fa-sm"></i></span></p>
                     </a>
                     <a href="#">
-                        <img src="images/hebergements/hôtel_de_la_mer.jpg"alt="Hôtel de la mer">
+                        <img src="images/hebergements/hôtel_de_la_mer.jpg" alt="Hôtel de la mer">
                         <p><span class="name">Hôtel de la mer</span></p>
                         <p>Nuit à partir de <span>46€</span></p>
                         <p><span class="bluestar"><i class="fas fa-star fa-sm"></i>
@@ -110,7 +114,7 @@
             <aside>
                 <div id="asidetitle">
                     <h3>Les plus populaires</h3>
-                    <p><i class="fas fa-chart-line fa-2x"></i></p>
+                    <p><i class="fas fa-chart-line fa-lg"></i></p>
                 </div>
                 <div id="asidecontainer">
                     <a href="#">
