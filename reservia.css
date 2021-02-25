@@ -310,13 +310,13 @@ aside {
     padding-left: 20px;
 }
 .activity1 {
-    width: 340px;
+    width: 23%;
     height: 500px;
     border-radius: 15px;
     box-shadow: 0 0 5px 0.2em #e2e2e2;
 }
 .activity2 {
-    width: 340px;
+    width: 23%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -686,8 +686,7 @@ footer div {
     }
     #accommodation article {
         width: 60%;
-        height: auto;
-        align-items: center;
+        height: auto;  
         border-radius: 0px 15px 15px 0px;
     }
     #linkscontainer {
@@ -698,7 +697,7 @@ footer div {
         width: 42%;
     }
     #accommodation article h2 , article h4 {
-        margin-left: 0;
+        margin-left: 20px;
     }
 /*-------hebergements/aside-------*/
     aside {
@@ -728,15 +727,6 @@ footer div {
     #activitycontainer {
         justify-content: space-around;
         row-gap: 30px;
-    }
-    .activity1 , .activity2 {
-        width: 45% ;
-    }
-    #pics1 , #pics2 , #pics3 , #pics4 {
-        height: 220px;
-    }
-    #pics1 img , #pics2 img , #pics3 img , #pics4 img {
-        height: 73%;
     }
 /*-------footer-------*/
     footer {
@@ -774,7 +764,6 @@ footer div {
     #accommodation article {
         width: 60%;
         height: auto;
-        border-radius: 0px 15px 15px 0px;
     }
     #linkscontainer {
         height: auto;
@@ -787,7 +776,6 @@ footer div {
     aside {
         width: 35%;
         height: auto;
-        border-radius: 15px 0px 0px 15px;
     }
     #asidecontainer {
         height: 90%;
@@ -805,21 +793,11 @@ footer div {
         width: 90%;
     }
 /*-------activites-------*/
+    #activitycontainer {
+        justify-content: space-around
+    }
     #activities h2 {
         margin-left: 35px;
-    }
-    #activitycontainer {
-        justify-content: space-around;
-        row-gap: 30px;
-    }
-    .activity1 , .activity2 {
-        width: 40%;
-    }
-    #pics1 , #pics2 , #pics3 , #pics4 {
-        height: 230px;
-    }
-    #pics1 img , #pics2 img , #pics3 img , #pics4 img {
-        height: 73%;
     }
 /*-------footer-------*/
     footer {
@@ -830,24 +808,23 @@ footer div {
         margin-left: 0;
     }
 }
-@media screen  and (min-width: 1240px) and (max-width: 1439px) {
+@media screen  and (min-device-width: 1240px) and (max-device-width: 1680px) {
     body {
-       margin: 0;
+        width: auto;
+        margin: 0;
     }
     main {
-        margin-right: 5%;
         margin-left: 5%;
+        margin-right: 5%;
     }
 /*-------header-------*/
     header {
         margin-right: 5%;
         margin-left: 5%;
     }
-    nav ul li a {
-        margin-right: 0px;
-    }
 /*-------hebergements/article-------*/
     #accommodation article {
+        width: 60%;
         height: auto;
     }
     #linkscontainer {
@@ -859,6 +836,7 @@ footer div {
     }
 /*-------hebergements/aside-------*/
     aside {
+        width: 35%;
         height: auto;
     }
     #asidecontainer {
@@ -871,27 +849,26 @@ footer div {
         height: 22%; 
     }
     #asidecontainer a img {
-        width: 40%;
+        width: 45%;
     }
     #asidetitle {
         width: 90%;
     }
 /*-------activites-------*/
     #activitycontainer {
-        row-gap: 30px;
+        justify-content: space-around
     }
-    .activity1 , .activity2 {
-        width: 40%;
+    #activities h2 {
+        margin-left: 35px;
     }
-    #pics1 , #pics2 , #pics3 , #pics4 {
-        height: 230px;
+/*-------footer-------*/
+    footer {
+       margin-top: 50px;
+       justify-content: space-around;
     }
-    #pics1 img , #pics2 img , #pics3 img , #pics4 img {
-        height: 74%;
+    footer div {
+        margin-left: 0;
     }
-}
-@media screen  and (min-width: 1439px) and (max-width: 1439px) {
-
 }
 
 
