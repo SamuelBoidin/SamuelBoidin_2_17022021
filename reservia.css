@@ -41,34 +41,59 @@ p {
     color: black;
 }
 /*-------header-------*/
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    flex-wrap: wrap-reverse;
 }
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: 20px;      
+    margin-right: 20px;
+    padding: 15px 20px 0 20px;     
 }
-nav a:hover {
+#desktopnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#desktopnav a:hover {
     color: #0065FC;
     border-top: #0065FC 2px solid;  
 }
-nav a span {
+nav span {
     font-family: 'Raleway-ExtraBold' , sans-serif , serif;
     color: #0065FC;
+}
+#responsivenav {
+    display: none;
+}
+#register {
+    margin: 0 5% 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    outline: none;
+}
+#accommodationandactivity {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: #F2F2F2 1px solid;
+}
+#accommodationandactivity div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-bottom: #F2F2F2 2px solid;
+    padding-bottom: 20px;
+}
+#accommodationandactivity a:hover {
+    color: #0065FC;
+}
+#accommodationandactivity div:hover {
+    border-bottom: #0065FC 2px solid;
 }
 /*-------research-------*/
 label {
@@ -165,20 +190,20 @@ h1 {
     margin-right: 15px;
 }
 /*-------hebergements/article-------*/
-#hebergements {
+#accommodation {
     width: 100%;  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 3%;
 }
-#hebergements span {
+#accommodation span {
     font-family: 'Raleway-ExtraBold' , sans-serif , serif;
 }
-#hebergements article h2 , article h4 {
+#accommodation article h2 , article h4 {
     margin-left: 40px;
 }
-#hebergements article {
+#accommodation article {
     width: 65%;
     height: 630px;
     display: flex;
@@ -271,7 +296,7 @@ aside {
     font-size:  0.9em;
 }
 /*-------activites-------*/
-#activites {
+#activities {
     margin-top: 5%;
 }
 #activitycontainer {
@@ -342,7 +367,7 @@ footer div {
     padding-top: 20px;
 }
 /*-------media queries-------*/
-@media screen and (min-device-width: 320px) and (max-device-width: 375px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 374px) {
     body {
         width: auto;
         margin: 0;
@@ -357,6 +382,15 @@ footer div {
         font-size: 1.2em;
     }
 /*-------header-------*/
+    header { 
+        margin: 0;
+    }
+    #desktopnav {
+        display: none;
+    }
+    #responsivenav {
+        display: contents;
+    }
 /*-------research-------*/
     #research {
         margin-left: 5%;
@@ -395,31 +429,29 @@ footer div {
         padding: 14px;
     }
 /*-------hebergements/article-------*/
-    #hebergements {
-        width: auto;
+    #accommodation {
         margin: 0;
         flex-direction: column-reverse;
     }
-    #hebergements article {
+    #accommodation article {
         width: auto;
         height: auto;
         background-color: transparent;
         border: none;
     }
     #linkscontainer {
-        width: 100%;
         height: auto;
         flex-direction: column;
         align-content: center;
+        row-gap: 20px;
     }
     #linkscontainer a {
         width: 90%;
-        margin-bottom: 20px;
     }
     #linkscontainer a p {
         font-size: 0.9em;
     }
-    #hebergements article h2 , article h4 {
+    #accommodation article h2 , article h4 {
         margin-left: 15px;
     }
 /*-------hebergements/aside-------*/
@@ -451,14 +483,14 @@ footer div {
         width: auto;
         flex-direction: column;
         align-content: center;
+        row-gap: 30px;
     }
-    #activites h2 {
+    #activities h2 {
         margin-left: 15px;
     }
     .activity1 {
         width: 90%;
         height: 200px;
-        margin-bottom: 30px;
     }
     .activity1 img{
         height: 70%;
@@ -466,7 +498,6 @@ footer div {
     .activity2 {
         width: 90%;
         height: 430px;
-        margin-bottom: 30px;
     }
     #pics1 , #pics2 , #pics3 , #pics4 {
         height: 200px;
@@ -477,9 +508,10 @@ footer div {
 /*-------footer-------*/ 
     footer {
         flex-direction: column;
+        margin-top: 50px;
     }
     footer div {
-        width: 100%;
+        width: auto;
     }
 }
 @media screen  and (min-device-width: 375px) and (max-device-width: 767px) {
@@ -494,6 +526,16 @@ footer div {
         font-size: 1.4em;
     }
 /*-------header-------*/
+    header { 
+        margin: 0;
+    }
+    #desktopnav {
+        display: none;
+    }
+    #responsivenav {
+        display: contents;
+        width: 100%;
+    }
 /*-------research-------*/
     #research {
         margin-left: 5%;
@@ -525,12 +567,12 @@ footer div {
         padding: 14px;
     }
 /*-------hebergements/article-------*/
-    #hebergements {
+    #accommodation {
         width: auto;
         margin: 0;
         flex-direction: column-reverse;
     }
-    #hebergements article {
+    #accommodation article {
         width: auto;
         height: auto;
         background-color: transparent;
@@ -541,15 +583,15 @@ footer div {
         height: auto;
         flex-direction: column;
         align-content: center;
+        row-gap: 20px;
     }
     #linkscontainer a {
         width: 90%;
-        margin-bottom: 20px;
     }
     #linkscontainer a p {
         font-size: 0.9em;
     }
-    #hebergements article h2 , article h4 {
+    #accommodation article h2 , article h4 {
         margin-left: 15px;
     }
 /*-------hebergements/aside-------*/
@@ -584,14 +626,14 @@ footer div {
         width: auto;
         flex-direction: column;
         align-content: center;
+        row-gap: 30px;
     }
-    #activites h2 {
+    #activities h2 {
         margin-left: 15px;
     }
     .activity1 {
         width: 90%;
         height: 200px;
-        margin-bottom: 30px;
     }
     .activity1 img{
         height: 70%;
@@ -599,7 +641,6 @@ footer div {
     .activity2 {
         width: 90%;
         height: 430px;
-        margin-bottom: 30px;
     }
     #pics1 , #pics2 , #pics3 , #pics4 {
         height: 200px;
@@ -609,13 +650,14 @@ footer div {
     }
 /*-------footer-------*/ 
     footer {
+        margin-top: 50px;
         flex-direction: column;
     }
     footer div {
-        width: 100%;
+        width: auto;
     }
 }
-@media screen  and (min-device-width: 767px) and (max-device-width: 1024px) {
+@media screen  and (min-device-width: 768px) and (max-device-width: 1023px) {
     body {
         width: auto;
         margin: 0;
@@ -626,4 +668,230 @@ footer div {
     h2 , h3 {
         font-size: 1.3em;
     }
+/*-------header-------*/
+    header {
+        margin-right: 0;
+        margin-left: 5%;
+    }
+    nav ul li a {
+        margin-right: 0px;
+    }
+/*-------research-------*/
+    #research {
+        margin-left: 5%;
+    }
+/*-------hebergements/article-------*/
+    #accommodation p {
+        font-size: 0.9em;
+    }
+    #accommodation article {
+        width: 60%;
+        height: auto;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+    }
+    #linkscontainer {
+        height: auto;
+        row-gap: 20px;
+    }
+    #linkscontainer a {
+        width: 42%;
+    }
+    #accommodation article h2 , article h4 {
+        margin-left: 0;
+    }
+/*-------hebergements/aside-------*/
+    aside {
+        width: 37%;
+        height: auto;
+        border-radius: 15px 0px 0px 15px;
+    }
+    #asidecontainer {
+        height: 90%;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+    #asidecontainer a {
+        width: 93%;
+        height: 20%; 
+    }
+    #asidecontainer a img {
+        width: 40%;
+    }
+    #asidetitle {
+        width: 95%;
+    }
+/*-------activites-------*/
+    #activities h2 {
+        margin-left: 20px;
+    }
+    #activitycontainer {
+        justify-content: space-around;
+        row-gap: 30px;
+    }
+    .activity1 , .activity2 {
+        width: 45% ;
+    }
+    #pics1 , #pics2 , #pics3 , #pics4 {
+        height: 220px;
+    }
+    #pics1 img , #pics2 img , #pics3 img , #pics4 img {
+        height: 73%;
+    }
+/*-------footer-------*/
+    footer {
+       margin-top: 50px;
+       justify-content: space-around;
+    }
+    footer div {
+        margin-left: 0;
+    }
 }
+@media screen  and (min-device-width: 1024px) and (max-device-width: 1239px) {
+    body {
+        width: auto;
+        margin: 0;
+    }
+    main {
+        margin: 0;
+    }
+    h2 , h3 {
+        font-size: 1.3em;
+    }
+/*-------header-------*/
+    header {
+        margin-right: 0;
+        margin-left: 5%;
+    }
+    nav ul li a {
+        margin-right: 0px;
+    }
+/*-------research-------*/
+    #research {
+        margin-left: 5%;
+    }
+/*-------hebergements/article-------*/
+    #accommodation article {
+        width: 60%;
+        height: auto;
+        border-radius: 0px 15px 15px 0px;
+    }
+    #linkscontainer {
+        height: auto;
+    }
+    #linkscontainer a {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+/*-------hebergements/aside-------*/
+    aside {
+        width: 35%;
+        height: auto;
+        border-radius: 15px 0px 0px 15px;
+    }
+    #asidecontainer {
+        height: 90%;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+    #asidecontainer a {
+        width: 90%;
+        height: 22%; 
+    }
+    #asidecontainer a img {
+        width: 45%;
+    }
+    #asidetitle {
+        width: 90%;
+    }
+/*-------activites-------*/
+    #activities h2 {
+        margin-left: 35px;
+    }
+    #activitycontainer {
+        justify-content: space-around;
+        row-gap: 30px;
+    }
+    .activity1 , .activity2 {
+        width: 40%;
+    }
+    #pics1 , #pics2 , #pics3 , #pics4 {
+        height: 230px;
+    }
+    #pics1 img , #pics2 img , #pics3 img , #pics4 img {
+        height: 73%;
+    }
+/*-------footer-------*/
+    footer {
+       margin-top: 50px;
+       justify-content: space-around;
+    }
+    footer div {
+        margin-left: 0;
+    }
+}
+@media screen  and (min-width: 1240px) and (max-width: 1439px) {
+    body {
+       margin: 0;
+    }
+    main {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+/*-------header-------*/
+    header {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    nav ul li a {
+        margin-right: 0px;
+    }
+/*-------hebergements/article-------*/
+    #accommodation article {
+        height: auto;
+    }
+    #linkscontainer {
+        height: auto;
+    }
+    #linkscontainer a {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+/*-------hebergements/aside-------*/
+    aside {
+        height: auto;
+    }
+    #asidecontainer {
+        height: 90%;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+    #asidecontainer a {
+        width: 90%;
+        height: 22%; 
+    }
+    #asidecontainer a img {
+        width: 40%;
+    }
+    #asidetitle {
+        width: 90%;
+    }
+/*-------activites-------*/
+    #activitycontainer {
+        row-gap: 30px;
+    }
+    .activity1 , .activity2 {
+        width: 40%;
+    }
+    #pics1 , #pics2 , #pics3 , #pics4 {
+        height: 230px;
+    }
+    #pics1 img , #pics2 img , #pics3 img , #pics4 img {
+        height: 74%;
+    }
+}
+@media screen  and (min-width: 1439px) and (max-width: 1439px) {
+
+}
+
+
