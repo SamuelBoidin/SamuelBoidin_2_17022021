@@ -367,7 +367,7 @@ footer div {
     padding-top: 20px;
 }
 /*-------media queries-------*/
-@media screen and (min-device-width: 320px) and (max-device-width: 374px) {
+@media (max-width: 374px)/*smartphone-s*/ {
     body {
         width: auto;
         margin: 0;
@@ -514,7 +514,7 @@ footer div {
         width: auto;
     }
 }
-@media screen  and (min-device-width: 375px) and (max-device-width: 767px) {
+@media (min-width: 375px) and (max-width: 767px)/*smartphone-m-l*/ {
     body {
         width: auto;
         margin: 0;
@@ -657,7 +657,7 @@ footer div {
         width: auto;
     }
 }
-@media screen  and (min-device-width: 768px) and (max-device-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px)/*tablet*/ {
     body {
         width: auto;
         margin: 0;
@@ -737,7 +737,7 @@ footer div {
         margin-left: 0;
     }
 }
-@media screen  and (min-device-width: 1024px) and (max-device-width: 1239px) {
+@media (min-width: 1024px) and (max-width: 1239px)/*laptop-s-m*/ {
     body {
         width: auto;
         margin: 0;
@@ -808,7 +808,7 @@ footer div {
         margin-left: 0;
     }
 }
-@media screen  and (min-device-width: 1240px) and (max-device-width: 1680px) {
+@media (min-width: 1240px) and (max-width: 1680px)/*laptop-l*/ {
     body {
         width: auto;
         margin: 0;
@@ -870,5 +870,3 @@ footer div {
         margin-left: 0;
     }
 }
-
-
